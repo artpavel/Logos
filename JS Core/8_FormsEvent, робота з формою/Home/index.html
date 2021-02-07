@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <form name="f1">
+        <p class="1">
+            <label>
+                <input type="text" name="input" class="ta1">
+            </label>
+            <input type="button" name="move" value="move" class="ta1 btn">
+            <label>
+                <input type="text" name="output" class="ta1">
+            </label>
+        </p>
+        <label>
+            <input type="text" name="bottom" class="task1" onblur="change()">
+        </label>
+    </form>
+</div>
+<hr>
+<div class="container">
+    <div class="account">
+        <h3>Create your account</h3>
+        <div class="wrap">
+            <form name="f2">
+                <label for="firstName">
+                    <span>First Name</span> <input type="text" name="firstName" id="firstName"
+                                                   placeholder="type here..." required>
+                </label>
+                <label for="secondName">
+                    <span>Second Name</span> <input type="text" name="lastName" id="secondName"
+                                                    placeholder="type here..." required>
+                </label>
+                <label for="email">
+                    <span>Email address</span> <input type="email" name="secondName" id="email"
+                                                      placeholder="type here..." required>
+                </label>
+                <p>
+                    <label for="man">
+                        <input type="radio" name="state" value="man" id="man" checked>man
+                    </label>
+                    <label for="woman">
+                        <input type="radio" name="state" value="woman" id="woman">woman
+                    </label>
+                </p>
+                <label for="pos">
+                    <span>Position</span>
+                    <select name="skills" id="pos" required>
+                        <option class="first" value disabled selected>Selected...</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="QC/QA">QC/QA</option>
+                    </select>
+                </label>
+                <p>
+                    <label for="agree">
+                        <input type="checkbox" name="agree" id="agree"
+                               onchange="document.getElementById('submit').disabled = !this.checked;">I agree all
+                        statements in Terms of service
+                    </label>
+                </p>
+                <input type="submit" name="submit" disabled="disabled" value="Sign Up" class="go btn" id="submit">
+
+            </form>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="top">
+            <img src="" alt="">
+        </div>
+        <h2 class="block1"></h2>
+        <p class="block2"></p>
+        <p class="block3"></p>
+        <form name="f3">
+            <input type="submit" name="submit" value="Sign Out" class="out btn" id="sign">
+        </form>
+        <div class="bottom">
+            <img src="https://img.icons8.com/ios/452/facebook-f.png" alt="">
+            <img src="http://s1.iconbird.com/ico/2013/9/450/w256h2561380453915Linkedin.png" alt="">
+            <img src="https://w7.pngwing.com/pngs/646/324/png-transparent-github-computer-icons-github-logo-monochrome-head.png" alt="">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

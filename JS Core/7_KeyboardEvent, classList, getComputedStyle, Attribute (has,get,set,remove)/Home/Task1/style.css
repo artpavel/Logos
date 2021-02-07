@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    border: 1px solid #000;
+}
+
+.wrapper.active{
+    display: block;
+}
+
+.wrapper.active1{
+    display: block;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 50px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.parent:hover,
+h2:hover{
+    cursor: pointer;
+}
+
+.div{
+    background-size: cover;
+}

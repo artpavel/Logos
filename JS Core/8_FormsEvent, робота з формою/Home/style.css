@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.task1 {
+    margin-top: 10px;
+    width: 95%;
+}
+
+.ta1 {
+    display: inline-block;
+    width: 31%;
+}
+
+.ta1:focus,
+.task1:focus {
+    outline: 1px solid rgb(190, 190, 227);
+}
+
+.btn{
+    background-color: green;
+    color: white;
+}
+
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+#firstName, #secondName, #email, #pos {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#firstName:focus,
+#secondName:focus,
+#email:focus,
+#pos:focus{
+    outline: none;
+    border: 1px solid rgb(190, 190, 227);
+    border-radius: 5px;
+}
+
+#agree {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+span {
+    display: block;
+    width: 100%;
+}
+
+input::placeholder, .first {
+    font-size: 8px;
+}
+
+p {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+.go {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.account {
+    margin: auto;
+    width: 350px;
+    border-radius: 20px;
+    border: 1px solid #000;
+
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: green;
+    border-radius: 20px 20px 0 0;
+    color: white;
+}
+
+
+.profile h2 {
+    margin-bottom: 10px;
+}
+
+
+
+p.f1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+input:focus{
+    outline: azure;
+}
+
+.wrap{
+    width: 90%;
+    margin: 10px auto 10px;
+}
+
+.out{
+    padding: 5px;
+}
+
+.top{
+    height: 50px;
+    position: relative;
+    background-color: green;
+    border-radius: 20px 20px 0 0 ;
+    margin-bottom: 50px;
+}
+
+.top img {
+    display: block;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20%);
+}
+
+
+.profile {
+    display: none;
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.bottom img{
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 0 0 20px 20px;
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
