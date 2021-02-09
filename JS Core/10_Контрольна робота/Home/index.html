@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="block top-block">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="center-block">
+        <button class="edit btn">edit</button>
+        <button class="style btn">style</button>
+    </div>
+    <div class="block bottom-block">
+        <div class="edit-block">
+            <textarea class="edit-area"></textarea>
+            <input type="button" value="add" class="btn-add">
+            <input type="button" value="save" class="btn-save">
+        </div>
+        <div class="style-block">
+            <form name="style">
+                <div class="form-size">
+                    <h2>Font Size</h2>
+                    <label class="radio"><input class="radio"  type="radio" onclick="changeStyle()" name="size"
+                                                value="12px"><span></span>12px</label>
+                    <label class="radio"><input class="radio" type="radio" onclick="changeStyle()"  name="size"
+                                                value="14px" checked><span></span>14px</label>
+                    <label class="radio"><input class="radio" type="radio" onclick="changeStyle()"  name="size"
+                                                value="16px"><span></span>16px</label>
+                    <label class="radio"><input class="radio" type="radio" onclick="changeStyle()"  name="size"
+                                                value="18px"><span></span>18px</label>
+                    <label class="radio"><input class="radio"  type="radio" onclick="changeStyle()"  name="size"
+                                                value="20px"><span></span>20px</label>
+
+                </div>
+                <div class="form-family">
+                    <h2>Font Family</h2>
+                    <select id="fontFamily" onclick="changeStyle()">
+                        <option value="" selected>Choose option</option>
+                        <option value="cursive">cursive</option>
+                        <option value="fantasy">fantasy</option>
+                        <option value="monospace">monospace</option>
+                        <option value="sans-serif">sans-serif</option>
+                    </select>
+                </div>
+                <div class="form-color">
+                    <h2>Color</h2>
+                    <input type="button" value="Color of text" class="btn-text-color">
+                    <input type="button" value="Background color" class="btn-bg-color">
+                    <div class="colors">
+                        <div class="color-box"></div>
+                        <div class="color-box"></div>
+                        <div class="color-box"></div>
+                        <div class="color-box"></div>
+                        <div class="color-box"></div>
+                        <div class="color-box"></div>
+                        <div class="color-box"></div>
+                        <div class="color-box"></div>
+                        <div class="color-box"></div>
+                    </div>
+                    <div class="colors1">
+                        <div class="color-box1"></div>
+                        <div class="color-box1"></div>
+                        <div class="color-box1"></div>
+                        <div class="color-box1"></div>
+                        <div class="color-box1"></div>
+                        <div class="color-box1"></div>
+                        <div class="color-box1"></div>
+                        <div class="color-box1"></div>
+                        <div class="color-box1"></div>
+                    </div>
+                </div>
+                <div class="form-style">
+                    <h2>Style</h2>
+                    <input type="checkbox"  onclick="changeStyle()" class="check-bold" data-name="bold"><span>Bold text</span>
+                    <input type="checkbox"  onclick="changeStyle()" class="check-cursive" data-name="italic"><span>Cursive text</span>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
