@@ -12,7 +12,7 @@
   font-size: 14px;
 }
 
-.block {
+.block, .secondBlock {
   min-height: 250px;
   border-radius: 10px;
   background-color: #f7f7f7;
@@ -228,6 +228,23 @@ h2 {
 .form-style span {
   margin-right: 15px;
   font-size: 12px;
+}
+
+/*  Second block  */
+.secondBlock {
+  display: none;
+}
+
+.secondBlock.active {
+  display: block;
+}
+
+.firstBlock {
+  display: none;
+}
+
+.firstBlock.active {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

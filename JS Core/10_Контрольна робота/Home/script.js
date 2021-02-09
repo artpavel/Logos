@@ -108,6 +108,7 @@ showElement('.edit', '.edit-block', '.style-block');
 showElement('.style', '.style-block', '.edit-block');
 showElement('.btn-text-color', '.colors', '.edit-block');
 showElement('.btn-bg-color', '.colors1', '.edit-block');
+showElement('.btn-add', '.secondBlock', '.firstBlock');
 
 /* ховаю елементи */
 hideElement('.btn-save', '.edit-block');
