@@ -31,15 +31,15 @@
                 <form name="style">
                     <div class="form-size">
                         <h2>Font Size</h2>
-                        <label class="radio"><input class="radio"  type="radio" onclick="changeStyle()" name="size"
+                        <label class="radio"><input class="radio" type="radio" onclick="changeStyle()" name="size"
                                                     value="12px"><span></span>12px</label>
-                        <label class="radio"><input class="radio" type="radio" onclick="changeStyle()"  name="size"
+                        <label class="radio"><input class="radio" type="radio" onclick="changeStyle()" name="size"
                                                     value="14px" checked><span></span>14px</label>
-                        <label class="radio"><input class="radio" type="radio" onclick="changeStyle()"  name="size"
+                        <label class="radio"><input class="radio" type="radio" onclick="changeStyle()" name="size"
                                                     value="16px"><span></span>16px</label>
-                        <label class="radio"><input class="radio" type="radio" onclick="changeStyle()"  name="size"
+                        <label class="radio"><input class="radio" type="radio" onclick="changeStyle()" name="size"
                                                     value="18px"><span></span>18px</label>
-                        <label class="radio"><input class="radio"  type="radio" onclick="changeStyle()"  name="size"
+                        <label class="radio"><input class="radio" type="radio" onclick="changeStyle()" name="size"
                                                     value="20px"><span></span>20px</label>
 
                     </div>
@@ -82,8 +82,8 @@
                     </div>
                     <div class="form-style">
                         <h2>Style</h2>
-                        <input type="checkbox"  onclick="changeStyle()" class="check-bold" data-name="bold"><span>Bold text</span>
-                        <input type="checkbox"  onclick="changeStyle()" class="check-cursive" data-name="italic"><span>Cursive text</span>
+                        <input type="checkbox" onclick="changeStyle()" class="check-bold" data-name="bold"><span>Bold text</span>
+                        <input type="checkbox" onclick="changeStyle()" class="check-cursive" data-name="italic"><span>Cursive text</span>
                     </div>
                 </form>
 
@@ -93,12 +93,57 @@
     </div>
 
     <div class="secondBlock">
+        <h2>Choose what you want</h2>
+        <form name="choose" class="choose">
+        <label class="radio"><input class="radio" type="radio" onclick="showCreateListOrTable()" name="choose"
+                                    value="table"><span class="show-table"></span>table</label>
+        <label class="radio"><input class="radio show-list" type="radio" onclick="showCreateListOrTable()" name="choose"
+                                    value="list"><span></span>list</label>
+        </form>
+        <div class="create-list">
+            <form name="form-list" class="list">
+                <p><span>Count Li:</span><input type="text" name="count" placeholder="Count Li:"></p>
+                <p>
+                <span>Type of marks:</span><select name="type" id="list_style">
+                    <option value="circle">circle</option>
+                    <option value="disc">disc</option>
+                    <option value="square">square</option>
+                </select>
+                </p>
+                <input type="button" value="Create list" name="create" class="btn-create-list btn-create">
+            </form>
+        </div>
+        <div class="create-table">
+            <form name="form-table" class="table">
+                <p><span>Count TR:</span><input type="text" name="form-table" placeholder="Count TR:"></p>
+                <p><span>Count TD:</span><input type="text" name="form-table" placeholder="Count TD:"></p>
+                <h2>Add style to your table</h2>
+                <p><span>Width of TD:</span><input type="text" name="form-table" placeholder="Width of TD:"></p>
+                <p><span>Height of TD:</span><input type="text" name="form-table" placeholder="Height of TD:"></p>
 
+                    <p><span>Width of border</span><input type="text" name="form-table" class="width"></p>
+                    <p>
+                        <span>Type of border:</span><select name="form-table" id="type_border">
+                        <option value="solid">solid</option>
+                        <option value="dotted ">dotted</option>
+                        <option value="dashed">dashed</option>
+                        <option value="double">double</option>
+                        <option value="groove">groove</option>
+                    </select>
+                    </p>
+                    <p>
+                        <span>Color of border:</span><select name="form-table" id="color_border">
+                        <option value="black">black</option>
+                        <option value="red">red</option>
+                        <option value="blue">blue</option>
+                        <option value="green">green</option>
+                    </select>
+                    </p>
+
+                <input type="button" value="Create table" name="form-table" class="btn-create-table btn-create">
+            </form>
+        </div>
     </div>
-
-
-
-
 </div>
 
 

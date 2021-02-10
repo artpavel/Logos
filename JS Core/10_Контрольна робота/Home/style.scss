@@ -6,7 +6,7 @@
 
 
 .container {
-  max-width: 1000px;
+  max-width: 700px;
   min-width: 450px;
   margin: auto;
   padding: 0 10px;
@@ -183,7 +183,7 @@ h2 {
   margin-top: 10px;
 }
 
-#fontFamily {
+#fontFamily, #list_style {
   margin-bottom: 10px;
   font-size: 10px;
   width: 220px;
@@ -226,7 +226,7 @@ h2 {
   outline: 1px solid black;
   position: absolute;
   top: 75px;
-  right: 135px;
+  right: 40px;
 
 
 }
@@ -257,26 +257,132 @@ h2 {
 }
 
 /*  Second block  */
-.secondBlock{
+.secondBlock {
   display: none;
 }
 
-.secondBlock.active{
+.secondBlock.active {
   display: block;
 }
-.firstBlock{
+
+.firstBlock {
   display: none;
 }
 
-.firstBlock.active{
+.firstBlock.active {
   display: block;
 }
 
+/*  form-list  */
+.create-list, .create-table {
+  display: none;
+}
+
+.create-list.active {
+  display: block;
+}
+
+.create-table.active {
+  display: block;
+}
+
+.btn-create {
+  width: fit-content;
+  display: block;
+  margin: 40px auto 0 0;
+  padding: 5px 10px;
+  background-color: #096909;
+  border-radius: 10px;
+  border: none;
+  color: #f7f7f7;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+input[type="text"]::placeholder {
+  font-size: 8px;
+}
+
+.list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  input[type="text"] {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 65px;
+    padding: 5px 10px;
+    border: none;
+    width: 220px;
+
+    &:focus {
+      outline: 2px solid #d1f3ff;
+    }
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
+
+#list_style {
+  margin-left: 35px;
+}
+
+.table {
+  span {
+    display: block;
+  }
+
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input[type="text"] {
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: none;
+    width: 85%;
+
+    &:focus {
+      outline: 2px solid #d1f3ff;
+    }
+  }
+
+  p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  p:nth-child(6), p:nth-child(7), p:nth-child(8) {
+    width: calc(33% - 5px);
+  }
 
 
 
-
-
-
+}
 
 

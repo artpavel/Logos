@@ -5,6 +5,7 @@ const arrColor1 = ['pink', 'purple', 'orange', 'red', 'blue', 'yellow', 'brown',
 let colorBox = document.querySelectorAll('.color-box');
 let colorBox1 = document.querySelectorAll('.color-box1');
 let topBlock = document.querySelector('.top-block');
+const list = document.forms['form-list'];
 
 /* функції  */
 const getS = selector => document.querySelector(selector);
@@ -57,14 +58,30 @@ function saveTopBlock(push) {
 function changeStyle() {
     getS('.top-block').style.fontSize = event.target.value;
     getS('.top-block').style.fontFamily = event.target.value;
-    if(event.target.checked){
+    if (event.target.checked) {
         getS('.top-block').style.fontWeight = event.target.dataset.name;
         getS('.top-block').style.fontStyle = event.target.dataset.name;
-    }else {
+    } else {
         getS('.top-block').style.fontWeight = 'normal';
         getS('.top-block').style.fontStyle = 'normal';
     }
 
+}
+
+/*Вибрати що будемо створювати - list or table */
+function showCreateListOrTable() {
+    let f = document.querySelector('.choose');
+    f.addEventListener('click', function () {
+        if (event.target.checked) {
+            if (f.choose.value === 'table') {
+                getS('.create-table').classList.add('active');
+                getS('.create-list').classList.remove('active');
+            } else {
+                getS('.create-list').classList.add('active');
+                getS('.create-table').classList.remove('active');
+            }
+        }
+    })
 }
 
 /**
@@ -87,7 +104,6 @@ function changeText(arr) {
         arr[i].addEventListener('click', function () {
             topBlock.style.color = getComputedStyle(arr[i]).backgroundColor;
             document.querySelector('.colors').classList.toggle('active');
-
         })
     }
 }
@@ -102,6 +118,18 @@ function changeFon(arr) {
     }
 }
 
+/* функція для створення списку */
+function createList(){
+    getS('.btn-create-list').addEventListener('click', ()=>{
+        const countLi = list.count.value;
+        const typeLi = list.type.value;
+        getS('.edit-area').value += `<ul style="list-style-type: ${typeLi}">`;
+        for(let i=0; i<countLi; i++){
+            getS('.edit-area').value += `<li>item ${i+1}</li>`;
+        }
+        getS('.edit-area').value += '</ul>';
+    })
+}
 
 /* показую елементи */
 showElement('.edit', '.edit-block', '.style-block');
@@ -109,6 +137,8 @@ showElement('.style', '.style-block', '.edit-block');
 showElement('.btn-text-color', '.colors', '.edit-block');
 showElement('.btn-bg-color', '.colors1', '.edit-block');
 showElement('.btn-add', '.secondBlock', '.firstBlock');
+showElement('.btn-create-list', '.firstBlock', '.secondBlock');
+
 
 /* ховаю елементи */
 hideElement('.btn-save', '.edit-block');
@@ -122,4 +152,7 @@ colorForBlocks(colorBox, arrColor);
 colorForBlocks(colorBox1, arrColor1);
 changeText(colorBox);
 changeFon(colorBox1);
+
+/* Створення списків та таблиць */
+createList();
 
