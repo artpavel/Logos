@@ -6,6 +6,7 @@ let colorBox = document.querySelectorAll('.color-box');
 let colorBox1 = document.querySelectorAll('.color-box1');
 let topBlock = document.querySelector('.top-block');
 const list = document.forms['form-list'];
+const table = document.forms['form-table'];
 
 /* функції  */
 const getS = selector => document.querySelector(selector);
@@ -118,18 +119,44 @@ function changeFon(arr) {
     }
 }
 
-/* функція для створення списку */
-function createList(){
-    getS('.btn-create-list').addEventListener('click', ()=>{
+/* функціональний вираз для створення списку */
+(function createList() {
+    getS('.btn-create-list').addEventListener('click', () => {
         const countLi = list.count.value;
         const typeLi = list.type.value;
         getS('.edit-area').value += `<ul style="list-style-type: ${typeLi}">`;
-        for(let i=0; i<countLi; i++){
-            getS('.edit-area').value += `<li>item ${i+1}</li>`;
+        for (let i = 0; i < countLi; i++) {
+            getS('.edit-area').value += `<li>item ${i + 1}</li>`;
         }
         getS('.edit-area').value += '</ul>';
     })
-}
+})();
+
+/* функціональний вираз для створення таблиці */
+(function createTable() {
+    getS('.btn-create-table').addEventListener('click', () => {
+        let newTable = {
+            tr: table.tr.value,
+            td: table.td.value,
+            widthTD: table.widthTD.value,
+            heightTD: table.heightTD.value,
+            widthBorder: table.widthBorder.value,
+            typeBorder: table.typeBorder.value,
+            colorBorder: table.colorBorder.value
+        }
+        console.log(newTable);
+        getS('.edit-area').value += `<table style="border-collapse: collapse; text-align: center">`;
+        for (let i = 0; i < newTable.tr; i++) {
+            getS('.edit-area').value += `<tr>`
+            for (let j = 0; j < newTable.td; j++) {
+                getS('.edit-area').value += `<td style="border:${newTable.widthBorder}px ${newTable.typeBorder} ${newTable.colorBorder}; 
+                                                    width: ${newTable.widthTD}px; height: ${newTable.heightTD}px">TD</td>`
+            }
+            `</tr>`;
+        }
+        getS('.edit-area').value += '</table>';
+    });
+})();
 
 /* показую елементи */
 showElement('.edit', '.edit-block', '.style-block');
@@ -138,6 +165,7 @@ showElement('.btn-text-color', '.colors', '.edit-block');
 showElement('.btn-bg-color', '.colors1', '.edit-block');
 showElement('.btn-add', '.secondBlock', '.firstBlock');
 showElement('.btn-create-list', '.firstBlock', '.secondBlock');
+showElement('.btn-create-table', '.firstBlock', '.secondBlock');
 
 
 /* ховаю елементи */
@@ -153,6 +181,5 @@ colorForBlocks(colorBox1, arrColor1);
 changeText(colorBox);
 changeFon(colorBox1);
 
-/* Створення списків та таблиць */
-createList();
+
 

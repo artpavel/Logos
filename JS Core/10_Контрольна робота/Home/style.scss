@@ -183,7 +183,7 @@ h2 {
   margin-top: 10px;
 }
 
-#fontFamily, #list_style {
+#fontFamily, #list_style, #type_border, #color_border {
   margin-bottom: 10px;
   font-size: 10px;
   width: 220px;
@@ -378,11 +378,50 @@ input[type="text"]::placeholder {
   }
 
   p:nth-child(6), p:nth-child(7), p:nth-child(8) {
-    width: calc(33% - 5px);
+    width: 33.333%;
   }
 
-
+  .width{
+    width: 73%;
+  }
+  .type{
+    margin-left: 20px;
+  }
 
 }
+
+#type_border, #color_border{
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

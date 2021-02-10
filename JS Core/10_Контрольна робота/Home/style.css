@@ -166,7 +166,7 @@ h2 {
   margin-top: 10px;
 }
 
-#fontFamily, #list_style {
+#fontFamily, #list_style, #type_border, #color_border {
   margin-bottom: 10px;
   font-size: 10px;
   width: 220px;
@@ -176,7 +176,7 @@ h2 {
   background: #F5F5F5;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
-#fontFamily:focus, #list_style:focus {
+#fontFamily:focus, #list_style:focus, #type_border:focus, #color_border:focus {
   outline: 1px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -341,7 +341,17 @@ input[type=text]::placeholder {
   font-size: 12px;
 }
 .table p:nth-child(6), .table p:nth-child(7), .table p:nth-child(8) {
-  width: calc(33% - 5px);
+  width: 33.333%;
+}
+.table .width {
+  width: 73%;
+}
+.table .type {
+  margin-left: 20px;
+}
+
+#type_border, #color_border {
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

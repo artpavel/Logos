@@ -95,16 +95,17 @@
     <div class="secondBlock">
         <h2>Choose what you want</h2>
         <form name="choose" class="choose">
-        <label class="radio"><input class="radio" type="radio" onclick="showCreateListOrTable()" name="choose"
-                                    value="table"><span class="show-table"></span>table</label>
-        <label class="radio"><input class="radio show-list" type="radio" onclick="showCreateListOrTable()" name="choose"
-                                    value="list"><span></span>list</label>
+            <label class="radio"><input class="radio" type="radio" onclick="showCreateListOrTable()" name="choose"
+                                        value="table"><span class="show-table"></span>table</label>
+            <label class="radio"><input class="radio show-list" type="radio" onclick="showCreateListOrTable()"
+                                        name="choose"
+                                        value="list"><span></span>list</label>
         </form>
         <div class="create-list">
             <form name="form-list" class="list">
                 <p><span>Count Li:</span><input type="text" name="count" placeholder="Count Li:"></p>
                 <p>
-                <span>Type of marks:</span><select name="type" id="list_style">
+                    <span>Type of marks:</span><select name="type" id="list_style">
                     <option value="circle">circle</option>
                     <option value="disc">disc</option>
                     <option value="square">square</option>
@@ -115,15 +116,15 @@
         </div>
         <div class="create-table">
             <form name="form-table" class="table">
-                <p><span>Count TR:</span><input type="text" name="form-table" placeholder="Count TR:"></p>
-                <p><span>Count TD:</span><input type="text" name="form-table" placeholder="Count TD:"></p>
+                <p><span>Count TR:</span><input type="text" name="tr" placeholder="Count TR:"></p>
+                <p><span>Count TD:</span><input type="text" name="td" placeholder="Count TD:"></p>
                 <h2>Add style to your table</h2>
-                <p><span>Width of TD:</span><input type="text" name="form-table" placeholder="Width of TD:"></p>
-                <p><span>Height of TD:</span><input type="text" name="form-table" placeholder="Height of TD:"></p>
+                <p><span>Width of TD:</span><input type="text" name="widthTD" placeholder="Width of TD:"></p>
+                <p><span>Height of TD:</span><input type="text" name="heightTD" placeholder="Height of TD:"></p>
 
-                    <p><span>Width of border</span><input type="text" name="form-table" class="width"></p>
+                    <p><span class="width">Width of border</span><input type="text" name="widthBorder"></p>
                     <p>
-                        <span>Type of border:</span><select name="form-table" id="type_border">
+                        <span class="type">Type of border:</span><select name="typeBorder" id="type_border">
                         <option value="solid">solid</option>
                         <option value="dotted ">dotted</option>
                         <option value="dashed">dashed</option>
@@ -132,7 +133,7 @@
                     </select>
                     </p>
                     <p>
-                        <span>Color of border:</span><select name="form-table" id="color_border">
+                        <span class="type">Color of border:</span><select name="colorBorder" id="color_border">
                         <option value="black">black</option>
                         <option value="red">red</option>
                         <option value="blue">blue</option>
