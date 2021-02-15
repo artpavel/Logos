@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  background-color: orange;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 20px;
+}
+a:hover {
+  background-color: #eec78c;
+}
+
+body {
+  background-color: floralwhite;
+}
+
+.container {
+  max-width: 700px;
+  position: relative;
+}
+
+.first {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.first span {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+input[type=text], input[type=submit], input[type=email], input[type=password] {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: floralwhite;
+  border: 1px solid #f4f2f2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+input[type=text]::placeholder, input[type=submit]::placeholder, input[type=email]::placeholder, input[type=password]::placeholder {
+  font-size: 8px;
+  padding: 5px;
+}
+input[type=text]:focus, input[type=submit]:focus, input[type=email]:focus, input[type=password]:focus {
+  outline: 1px solid rgba(214, 214, 233, 0.4);
+}
+
+input[type=submit] {
+  background-color: #4031d7;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: floralwhite;
+}
+
+span {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.block {
+  max-width: 500px;
+  margin: 0 auto;
+  position: fixed;
+  top: 25px;
+  left: 180px;
+  transition: all 0.4s;
+  display: none;
+}
+.block .block-top {
+  min-height: 100px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block .block-top .circle {
+  width: 60px;
+  height: 60px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+}
+.block .block-top span {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 20px;
+  height: 12px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-78%) rotate(-45deg);
+  cursor: pointer;
+}
+
+.block-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.block-bottom h1 {
+  margin: 10px 0;
+}
+.block-bottom p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+input[type=submit] {
+  background-color: #4031d7;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
