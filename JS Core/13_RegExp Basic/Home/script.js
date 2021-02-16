@@ -34,18 +34,23 @@ document.querySelector('.out').addEventListener('click', function () {
     f.lastName.value = '';
     f.email.value = '';
     f.password.value = '';
+    getID('check').checked=false;
+    getID('check').setAttribute("disabled", "true")
+    getID('sign_up').setAttribute("disabled", "true")
+
 })
 
+// document.querySelector('span').addEventListener('mouseup', event => {
+//     if (f.firstName.value !== '' && f.firstName.value  && f.lastName.value !== '' && f.email.value !== '' && f.password.value !== '') {
+//         getID('check').removeAttribute("disabled");
+//     }
+//
+// });
+
 document.querySelector('span').addEventListener('mouseup', event => {
-    if (f.firstName.value !== '' && f.lastName.value !== '' && f.email.value !== '' && f.password.value !== '') {
+    if (nameRegExp.test(f.firstName.value) && nameRegExp.test(f.lastName.value) && emailRegExe.test(f.email.value) &&  passwordRegExp.test(f.password.value)) {
         getID('check').removeAttribute("disabled");
     }
 });
 
-
-// (function checked() {
-//     if (f.firstName.value !== '' && f.lastName.value !== '' && f.email.value !== '' && f.password.value !== '') {
-//         getID('check').removeAttribute("disabled");
-//     }
-// })();
 
