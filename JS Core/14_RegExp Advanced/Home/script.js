@@ -5,9 +5,11 @@ let passwordRegExp = /\w.{3,16}$/;
 let emailRegExp = /^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z])+$/
 let getSelector = selector => document.querySelector(selector);
 let myDate = {};
-let arrDates = [];
+
 
 /* валідація форм початок */
+
+// кнопка спочатку не активна.
 function checkForms(element, pattern) {
     getSelector(element).oninput = function () {
         let test = pattern.test(this.value);
@@ -30,7 +32,7 @@ function checkButtonAdd() {
     if (getSelector('.login').value !== '' && getSelector('.email').value !== '' && getSelector('.password').value !== '') {
         getSelector('.warn').classList.remove('active');
         createDate();
-        createTable()
+        createTable();
         clearInput();
     } else {
         getSelector('.warn').classList.toggle('active');
@@ -57,6 +59,8 @@ function createDate() {
     }
 }
 
+// створення даних рядків
+
 // вивід в таблицю
 function createTable() {
     let tr = document.querySelectorAll('tr');
@@ -75,9 +79,47 @@ function createTable() {
 
 
 /* функції кінець */
-
+// добавлення по кліку
 getSelector('.add-user').addEventListener('click', () => {
     checkButtonAdd();
+})
 
+// видалення по кліку
+document.addEventListener('click', event => {
+    if (event.target.matches('.delete')) {
+        let del = getSelector('.delete').parentNode.parentNode;
+        console.log(getSelector('.delete').parentNode.parentNode);
+        del.remove();
+        let tr = document.querySelectorAll('tr');
+        let td = document.querySelectorAll('td')
+        console.log(tr)
+
+    }
+})
+
+
+// зміна елементу по кліку
+let element = {};
+document.addEventListener('click', event => {
+    let edit;
+    let number;
+    if (event.target.matches('.edit')) {
+        let index = document.querySelector('.edit').parentNode.parentNode.rowIndex;
+        edit = document.querySelector('.edit').parentNode.parentNode;
+        console.log(index)
+        number = edit.childNodes[3].textContent;
+        getSelector('.login').value = edit.childNodes[3].textContent;
+        getSelector('.password').value = edit.childNodes[5].textContent;
+        getSelector('.email').value = edit.childNodes[7].textContent;
+        getSelector('.first').classList.add('active');
+        getSelector('.two').classList.add('active');
+    }
+    if (event.target.matches('.edit-user')) {
+        createDate();
+
+        getSelector('.first').classList.remove('active');
+        getSelector('.two').classList.remove('active');
+    }
 
 })
+

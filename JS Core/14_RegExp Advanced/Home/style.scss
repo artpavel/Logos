@@ -66,7 +66,7 @@ input[type="text"], input[type="password"] {
   }
 }
 
-.add-user {
+.add-user, .edit-user {
   padding: 5px 10px;
   background-color: white;
   border: 1px solid greenyellow;
@@ -80,6 +80,19 @@ input[type="text"], input[type="password"] {
     color: white;
   }
 }
+
+.first.active{
+  display: none;
+}
+
+.two{
+  display: none;
+}
+
+.two.active{
+  display: block;
+}
+
 
 .warn {
   height: 16px;
