@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+.task1{
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.block, .block1{
+  background-color: green;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 156px;
+  height: 273px;
+  position: absolute;
+  top: 64px;
+  left: 222px;
+}
+
+.block1{
+  background-color: black;
+  display: none;
+}
+
+.t1, .t2{
+  position: relative;
+  z-index: 50;
+}
+
+img{
+  display: block;
+  object-fit: cover;
+}

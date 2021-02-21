@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        .block{
+            width: 100px;
+            height: 150px;
+            border: 1px solid #000;
+            margin: 20px;
+            background-color: cadetblue;
+            /* display: none; */
+        }
+        .red{
+            background-color: red;
+        }
+        .shadow{
+            box-shadow: 0 0 10px 0 black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <h1>Box</h1>
+    </div>
+    <p class="text">some text 1</p>
+    <p class="text">some text 2</p>
+    <p class="title">some title</p>
+    <a href="#" id="link">link</a>
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item 5</li>
+        <li>item</li>
+        <li>item</li>
+        <li><b>item</b></li>
+        <li>item</li>
+    </ul>
+    <input type="text" id="login" value="admin">
+    <input type="button" value="get" id="get">
+    <input type="button" value="rem" id="rem">
+    <hr>
+    <div>
+        <input type="button" value="add" class="add"> 
+        <input type="button" value="remove" class="remove"> 
+        <input type="button" value="toggle" class="toggle"> 
+    </div>
+    <div class="block"></div>
+    
+    <script src="jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
